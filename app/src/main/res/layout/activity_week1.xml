@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".week1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Programming Language Level\n">
+
+
+            </TextView>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15sp"
+                android:textStyle="bold"
+            android:text="Programming Language\n">
+
+        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\t \t \t \t \t \t – A formal language, which comprises a set of instructions that produce various kinds of output. Programming languages are used in computer programing to implement specific algorithms. Most programming languages consist of instructions for computers.\n">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Computer Program \n">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\t \t \t \t \t \t – a collection of instructions that performs a specific task when executed by a computer. Most computer devices require programs to function properly. A computer program is usually written by a computer programmer and can be written in either high or low-level languages, depending on the task and the hardware being used. ">
+
+            </TextView>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+
+                android:textColor="#000"
+                android:text="\n\t\t\t•\t\t	When we think about computer programmers, we probably think about people who write in high-level language."></TextView>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\t\t\t•\t\t	Most computer programming languages are written in a high-level programming language. They use the common English language to help make the code more understandable and to speed up the process of writing and debugging programs."></TextView>
+
+            <TextView
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\t\t\t•\t\t	Computers, however, use their own language written using binary called Machine code. This is known as a low-level language."></TextView>
+
+            <TextView
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\t\t\t•\t\tProgramming languages can be divided into two different levels:"></TextView>
+
+            <TextView
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\t\t\t•\t\tHigh-level Languages – Python, Visual Basic, Java, C, C++, SQL and many more."></TextView>
+
+            <TextView
+                android:textColor="#000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\n\t\t\t•\t\tLow-level Languages – Hardware/Processor-specific assembly languages and machine code."></TextView>
+            <ImageView
+                android:id="@+id/lesson1_pic1"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lesson1_pic1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:text="History of Java\n"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textColor="#000"
+                android:text="\t\t\tThe utmost tests computer programmers today rest in controlling the power of networks. Applications produces today will definitely be executed on machines connected by a global network computing resources. The growing significance of networks is employing new requirement on current tools and increasing the demand for a fast growing list of absolutely new kinds of applications. "></TextView>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="An internal corporate research project codenamed Green was funded by Sun Microsystems in 1991. It resulted in the development of a language based on C++. The language was named Oak, after the oak tree outside the window of the creator, James Gosling. It was learned that there is already a language called Oak, so a group of people from Sun Microsystems suggested to change the name into Java."></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="In May 1995, Sun formally introduced Java in a conference. Then, business enterprises became interested with Java because it is used to enhance web servers, develop large-scale enterprise, and provide applications for electronic devices (e.g. mobile phones and personal computers), among others. "></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Editors, Compilers, and Interpreters"></TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lesson1_pic2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Class body – area between the braces"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Class declaration – contains class body with all the codes that provide for the life cycle of the objects created from the class"></TextView>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="Java Virtual Machine (JVM) – abstract computing machine that enables a computer to run a Java program"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="With varied kinds of computers and operating systems connected to the internet, portability is a major aspect. To run Java programs virtually on the internet, different systems must be executed. Having different versions of applet for different computers is not practical. Identical codes must work on any computer. Thus, the creation of a portable executable code is necessary. The mechanism that guarantees security also aids to generate portability."></TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lesson1_pic3"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+            android:text="Development Environments"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Java Development Kit (JDK) is a tool used for creating Java programs (applications and applets). In context with JDK, Java programs undergo five phases: create/edit, compile, load, verify, and execute, which are done using the JDK.  JDK and its documentations can be downloaded from a Java Website."></TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="\nPhase 1. "></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Creating and editing a file using an editor done by the programmer.  This is where the programmer types the needed rectifications and save the program on a storage device as a .java file extension."></TextView>
+
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Phase 2. "></TextView>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+            android:text="The Java command is used by the programmer to compile a program. In this phase, if you are going to compile a program called Greeting.java you would type: \n Javac Greeting.java"></TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Phase 3. "></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+                android:text="Before loading is performed, the program will have to place the program in the memory before it can implement a process. The .class files containing the program’s bytecodes will be taken by the class loader and transmits it to memory."></TextView>
+
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Phase 4. "></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginRight="10dp"
+                android:text="Bytecodes are examined by the bytecode verifier to validate that it does not defy Java restrictions. It ensures that Java programs entering over the network does not harm the user’s files or system."></TextView>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Phase 5. "></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:layout_marginRight="10dp"
+                    android:text="The bytecodes stated in the program will be executed by the JVM. As they are interpreted, JVM analyzes the bytecodes."></TextView>
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Syntax and Semantics"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Introducing Java Syntax"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="You’ve now seen several programming languages: BSL, ISL, ISL+, and class/0. Now time for one more: Java. Let’s start by looking at the syntax, the way Java programs are written."></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="\nHere’s a comment in class/0:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text=";; Hi there"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\nHere’s a comment in Java:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="// Hi there"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="\nHere’s a block comment in class/0:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="#| Hi /n there |#"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\nJava:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"   android:textColor="#000"
+                android:textStyle="bold"
+                android:text="/* Hi /n there */"></TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\nA class definition in class/0:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text=";; A Coord is a (new coord% Integer Integer)\n(define-class coord% /n (fields x y))"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="\nA class definition in Java:"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:text="class Coord { \nInteger x; \n Integer y; \n }"></TextView>
+
+            <Button
+                android:text="Take Quiz"
+                android:id="@+id/quiz"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

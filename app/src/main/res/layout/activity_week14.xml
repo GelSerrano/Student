@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".week14">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginLeft="25sp"
+            android:layout_marginRight="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Radio Buttons "/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="•	Radio buttons are groups of buttons in which, by convention, only one button at a time can be selected. The Swing release supports radio buttons with the JRadioButton and ButtonGroup classes. To put a radio button in a menu, use the JRadioButtonMenuItem class. Other ways of displaying one-of-many choices are combo boxes and lists. Radio buttons look similar to check boxes, but, by convention, check boxes place no limits on how many items can be selected at a time."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="Because JRadioButton inherits from AbstractButton, Swing radio buttons have all the usual button characteristics, as discussed earlier in this section. For example, you can specify the image displayed in a radio button. "/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="Here is a picture of an application that uses five radio buttons to let you choose which kind of pet is displayed:"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="255dp"
+                android:src="@drawable/lesson14_pic1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="List "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="•	List in Java provides the facility to maintain the ordered collection. It contains the index-based methods to insert, update, delete and search the elements. It can have the duplicate elements also. We can also store the null elements in the list."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="•	The List interface is found in the java.util package and inherits the Collection interface. It is a factory of ListIterator interface. Through the ListIterator, we can iterate the list in forward and backward directions."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="190dp"
+                android:src="@drawable/lesson14_pic2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Output: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/lesson14_pic3"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Checkbox"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="The JCheckBox class provides support for check box buttons. You can also put check boxes in menus, using the JCheckBoxMenuItem class. Because JCheckBox and JCheckBoxMenuItem inherit from AbstractButton, Swing check boxes have all the usual button characteristics, as discussed earlier in this section. For example, you can specify images to be used in check boxes."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="•	Check boxes are similar to radio buttons but their selection model is different, by convention. Any number of check boxes in a group — none, some, or all — can be selected. A group of radio buttons, on the other hand, can have only one button selected."/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="•	Here is a picture of an application that uses four check boxes to customize a cartoon:"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="255dp"
+                android:src="@drawable/lesson14_pic4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Menu Bar"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="The JMenuBar class is used to display menubar on the window or frame. It may have several menus."/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="207dp"
+                android:src="@drawable/lesson14_pic5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Popup Menu "/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="PopupMenu can be dynamically popped up at specific position within a component. It inherits the JComponent class."/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="346dp"
+                android:src="@drawable/lesson14_pic6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Output: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:src="@drawable/lesson14_pic7" />
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Menu"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+
+                    android:layout_width="20sp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:paddingLeft="10dp"
+                    android:text="\u2022"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+
+                    android:text="•	The object of JMenu class is a pull down menu component which is displayed from the menu bar. It inherits the JMenuItem class."/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Example: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="422dp"
+                android:src="@drawable/lesson14_pic8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Output: "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_margin="15dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="219dp"
+                android:src="@drawable/lesson14_pic9" />
+
+            <Button
+                android:text="Take Quiz"
+                android:id="@+id/quiz"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

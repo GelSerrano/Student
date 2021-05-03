@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bggg"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/student"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#fff"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Student!"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="30dp"
+            android:id="@+id/fone"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/lecture"
+                android:gravity="center">
+                <ImageView
+
+                    android:src="@drawable/ic_book_black_24dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="10dp"/>
+<!--                    android:background="@drawable/cerclebackground"-->
+<!--                    android:src="@drawable/ic_looks_one_black_24dp"-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000"
+                    android:text="Lecture"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="30dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+
+            android:layout_width="150dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:id="@+id/Assessment"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_assessment_black_24dp"/>
+<!--                    android:background="@drawable/cerclebackgroundpink"-->
+<!--                    android:src="@drawable/ic_looks_two_black_24dp"-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:text="Assessment"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="30dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/fthree"
+            android:layout_width="150dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:id="@+id/Simulation"
+                android:background="#fff"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/ic_play_circle_filled_black_24dp"
+                    android:padding="10dp"/>
+
+<!--                    android:background="@drawable/cerclebackgroundgreen"-->
+<!--                    android:src="@drawable/ic_looks_3_black_24dp"-->
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="Simulation"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardMaxElevation="30dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/ffour"
+            android:layout_width="150dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:id="@+id/PDF"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/ic_picture_as_pdf_black_24dp"
+                    android:padding="10dp"
+                     />
+<!--                android:background="@drawable/cerclebackgroundyellow"-->
+<!--                android:src="@drawable/ic_looks_4_black_24dp"-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="PDF's"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_chat_bubble_outline_black_24dp" />
+
+
+</LinearLayout>

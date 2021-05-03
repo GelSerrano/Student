@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.student">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/comprologo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/comprologo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".final_quiz16"></activity>
+        <activity android:name=".final_quiz15" />
+        <activity android:name=".final_quiz14" />
+        <activity android:name=".final_quiz13" />
+        <activity android:name=".midterm_quiz11" />
+        <activity android:name=".midterm_quiz10" />
+        <activity android:name=".midterm_quiz9" />
+        <activity android:name=".midterm_quiz8" />
+        <activity android:name=".midterm_quiz7" />
+        <activity android:name=".prelim_quiz5" />
+        <activity android:name=".prelim_quiz4" />
+        <activity android:name=".prelim_quiz3" />
+        <activity android:name=".prelim_quiz2" />
+        <activity
+            android:name=".week16"
+            android:label="Week 16"
+            android:parentActivityName=".lecture_finals" />
+        <activity
+            android:name=".week15"
+            android:label="Week 15"
+            android:parentActivityName=".lecture_finals" />
+        <activity
+            android:name=".week14"
+            android:label="Week 14"
+            android:parentActivityName=".lecture_finals" />
+        <activity
+            android:name=".week13"
+            android:label="Week 13"
+            android:parentActivityName=".lecture_finals" />
+        <activity
+            android:name=".lecture_finals"
+            android:label="Final Period"
+            android:parentActivityName=".lecture1" />
+        <activity
+            android:name=".simulation"
+            android:label="Simulation"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".prelim_quiz1" />
+        <activity
+            android:name=".week11"
+            android:label="Week 11"
+            android:parentActivityName=".lecture_midterm" />
+        <activity
+            android:name=".week10"
+            android:label="Week 10"
+            android:parentActivityName=".lecture_midterm" />
+        <activity
+            android:name=".lecture_midterm"
+            android:label="Midterm Period"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".week9"
+            android:label="Week 9"
+            android:parentActivityName=".lecture_midterm" />
+        <activity
+            android:name=".week8"
+            android:label="Week 8"
+            android:parentActivityName=".lecture_midterm" />
+        <activity
+            android:name=".week7"
+            android:label="Week 7"
+            android:parentActivityName=".lecture_midterm" />
+        <activity
+            android:name=".week5"
+            android:label="Week 5"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".week4"
+            android:label="Week 4"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".Week3"
+            android:label="Week 3"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".Week2"
+            android:label="Week2"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".week1"
+            android:label="Week 1"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".lecture1"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Menu_Simulation" />
+        <activity android:name=".Menu_PDF" />
+        <activity android:name=".Menu_Assessment" />
+        <activity
+            android:name=".Lecture"
+            android:label="Preliminary Period"
+            android:parentActivityName=".Lecture" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

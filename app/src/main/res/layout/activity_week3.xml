@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Week3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Introduction to Object Oriented Programming"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_margin="20dp"
+                android:text="                  -   Object Oriented Programming (OOP) is a programming model where programs are organized around objects and data rather than action and logic.
+OOP allows decomposition of a problem into a number of entities called objects and then builds data and functions around these objects. "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Declaring Classes"
+                android:textSize="25sp"
+                android:textColor="#000"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:src="@drawable/lesson3_pic1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="This is a class declaration. The class body (the area between the braces) contains all the code that provides for the life cycle of the objects created from the class: constructors for initializing new objects, declarations for the fields that provide the state of the class and its objects, and methods to implement the behavior of the class and its objects."
+                />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            android:textColor="#000"
+
+                android:text="
+                The preceding class declaration is a minimal one. It contains only those components of a class declaration that are required. You can provide more information about the class, such as the name of its superclass, whether it implements any interfaces, and so on, at the start of the class declaration. For example,"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:src="@drawable/lesson3_pic2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="means that MyClass is a subclass of MySuperClass and that it implements the YourInterface interface.
+
+"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Declaring Member Variable"
+                android:textSize="25sp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="There are several kinds of variables:\n
+
+Member variables in a class—these are called fields. \n
+Variables in a method or block of code—these are called local variables.\n
+Variables in method declarations—these are called parameters."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="The Bicycle class uses the following lines of code to define its fields:"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:text="
+public int cadence; \n
+public int gear; \n
+public int speed;"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="Field declarations are composed of three components, in order:
+\n
+Zero or more modifiers, such as public or private.\n
+The field's type.\n
+The field's name.\n
+The fields of Bicycle are named cadence, gear, and speed and are all of data type integer (int). The public keyword identifies these fields as public members, accessible by any object that can access the class."/>
+
+
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:textStyle="bold"
+                android:textSize="15dp"
+            android:text="\n Access Modifiers"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="The first (left-most) modifier used lets you control what other classes have access to a member field. For the moment, consider only public and private. Other access modifiers will be discussed later.
+\n
+public modifier—the field is accessible from all classes.\n
+private modifier—the field is accessible only within its own class.\n"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="In the spirit of encapsulation, it is common to make fields private. This means that they can only be directly accessed from the Bicycle class. We still need access to these values, however. This can be done indirectly by adding public methods that obtain the field values for us:"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="275dp"
+                android:src="@drawable/lesson3_pic3" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+            android:text="Types \n
+"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="All variables must have a type. You can use primitive types such as int, float, boolean, etc. Or you can use reference types, such as strings, arrays, or objects."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Variable Names \n
+"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text="
+All variables, whether they are fields, local variables, or parameters, follow the same naming rules and conventions that were covered in the Language Basics lesson, Variables—Naming.\n
+\n
+In this lesson, be aware that the same naming rules and conventions are used for method and class names, except that \n
+\n
+\n the first letter of a class name should be capitalized, and
+\n the first (or only) word in a method name should be a verb."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Defining Methods"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here is an example of a typical method declaration:"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lesson3_pic4"/>
+
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="The only required elements of a method declaration are the method's return type, name, a pair of parentheses, (), and a body between braces, {}."/>
+            <TextView
+            android:layout_width="wrap_content"
+                android:textColor="#000"
+            android:layout_height="wrap_content"
+            android:text="More generally, method declarations have six components, in order:"/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="Modifiers—such as public, private, and others you will learn about later. \n
+The return type—the data type of the value returned by the method, or void if the method does not return a value. \n
+The method name—the rules for field names apply to method names as well, but the convention is a little different. \n
+The parameter list in parenthesis—a comma-delimited list of input parameters, preceded by their data types, enclosed by parentheses, (). If there are no parameters, you must use empty parentheses. \n
+An exception list—to be discussed later. \n
+The method body, enclosed between braces—the method's code, including the declaration of local variables, goes here. \n"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Controlling Access to Member of a cLass"
+                android:textSize="25sp"
+                android:textColor="#000"
+                />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textColor="#000"
+            android:text="Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:\n
+\n
+At the top level—public, or package-private (no explicit modifier). \n
+At the member level—public, private, protected, or package-private (no explicit modifier). \n
+A class may be declared with the modifier public, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package (packages are named groups of related classes — you will learn about them in a later lesson.) \n
+\n
+At the member level, you can also use the public modifier or no modifier (package-private) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: private and protected. The private modifier specifies that the member can only be accessed in its own class. The protected modifier specifies that the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package.\n
+\n
+The following table shows the access to members permitted by each modifier."/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lesson3_pic5"/>
+            <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+            <Button
+                android:text="Take Quiz"
+                android:id="@+id/quiz"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
