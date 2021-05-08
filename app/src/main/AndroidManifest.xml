@@ -13,7 +13,10 @@
         android:roundIcon="@drawable/comprologo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".final_quiz16"></activity>
+        <activity
+            android:name=".Assessment"
+            android:label="Assessment" />
+        <activity android:name=".final_quiz16" />
         <activity android:name=".final_quiz15" />
         <activity android:name=".final_quiz14" />
         <activity android:name=".final_quiz13" />
@@ -118,5 +121,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

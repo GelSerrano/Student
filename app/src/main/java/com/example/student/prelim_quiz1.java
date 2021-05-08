@@ -13,10 +13,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +52,15 @@ public class prelim_quiz1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prelim_quiz1);
+
+        // Storing data into SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("P_Q1SharedPref",MODE_PRIVATE);
+        // Creating an Editor object to edit(write to the file)
+        final SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        //getDate
+        DateTime dt = new DateTime();
+        final String currdate = dt.getDate();
 
         timer = findViewById(R.id.textView10);
         //Button
@@ -666,6 +679,10 @@ public class prelim_quiz1 extends AppCompatActivity {
                             wrong++;
                         }
 
+                        //save prelim quiz 1 result
+                        myEdit.putString("pq1_date","Q(1) " + currdate);
+                        myEdit.putInt("pq1_score", correct);
+                        myEdit.commit();
 
                         AlertDialog dialog = new AlertDialog.Builder(prelim_quiz1.this)
 
