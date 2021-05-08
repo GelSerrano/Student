@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -50,6 +51,13 @@ public class midterm_quiz10 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_midterm_quiz10);
+
+        // Storing data into SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("M_Q10SharedPref",MODE_PRIVATE);
+        final SharedPreferences.Editor myEdit = sharedPreferences.edit();
+        //getDate
+        DateTime dt = new DateTime();
+        final String currdate = dt.getDate();
 
         timer = findViewById(R.id.textView10);
         //Button
@@ -667,6 +675,11 @@ public class midterm_quiz10 extends AppCompatActivity {
                         } else {
                             wrong++;
                         }
+
+                        //save prelim quiz 1 result
+                        myEdit.putString("mq10_date","Q10 " + currdate);
+                        myEdit.putInt("mq10_score", correct);
+                        myEdit.commit();
 
 
                         AlertDialog dialog = new AlertDialog.Builder(midterm_quiz10.this)

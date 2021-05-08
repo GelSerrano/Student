@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.student">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/comprologo"
@@ -13,6 +9,8 @@
         android:roundIcon="@drawable/comprologo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Chart"
+            android:label="Assessment"/>
         <activity
             android:name=".Assessment"
             android:label="Assessment" />
@@ -121,6 +119,9 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

@@ -679,7 +679,7 @@ public class prelim_quiz4 extends AppCompatActivity {
                         }
 
                         //save prelim quiz 1 result
-                        myEdit.putString("pq4_date", "Q(4) " + currdate);
+                        myEdit.putString("pq4_date", "Q4 " + currdate);
                         myEdit.putInt("pq4_score", correct);
                         myEdit.commit();
 

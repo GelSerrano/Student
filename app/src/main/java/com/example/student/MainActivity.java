@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void opensAssessment(){
-        Intent intent = new Intent(this,Assessment.class);
+        Intent intent = new Intent(this,Chart.class);
         startActivity(intent);
     }
 
