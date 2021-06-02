@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,14 +47,17 @@ public class midterm_quiz8 extends AppCompatActivity {
     Button next1, next2, next3, next4, next5, next6, next7, next8, next9, back2, back3, back4, back5, back6, back7, back8, back9, back10;
     EditText ans8, ans9, ans10;
     DatabaseReference databaseReference;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_midterm_quiz8);
 
+        correct = 0;
+
         // Storing data into SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("M_Q8SharedPref",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("M_Q8SharedPref",MODE_PRIVATE);
         final SharedPreferences.Editor myEdit = sharedPreferences.edit();
         //getDate
         DateTime dt = new DateTime();
@@ -676,11 +680,160 @@ public class midterm_quiz8 extends AppCompatActivity {
                             wrong++;
                         }
 
-                        //save prelim quiz 1 result
-                        myEdit.putString("mq8_date","Q8 " + currdate);
-                        myEdit.putInt("mq8_score", correct);
-                        myEdit.commit();
+                        //storing history stuff
+                        String mq8_h1_pref = sharedPreferences.getString("mq8_h1_date", null);
+                        if(mq8_h1_pref == null) {
+                            myEdit.putString("mq8_h1_date",currdate);
+                            myEdit.putInt("mq8_h1_score", correct);
+                            myEdit.commit();
 
+                            myEdit.putString("test","test");
+                            Log.i("SP_", "mq8_h1 processed");
+
+                        } else {
+                            String mq8_h2_pref = sharedPreferences.getString("mq8_h2_date", null);
+                            if (mq8_h2_pref == null) {
+                                myEdit.putString("mq8_h2_date", currdate);
+                                myEdit.putInt("mq8_h2_score", correct);
+                                myEdit.commit();
+                                Log.i("SP_", "mq8_h2 processed");
+                            } else {
+                                String mq8_h3_pref = sharedPreferences.getString("mq8_h3_date", null);
+                                if (mq8_h3_pref == null) {
+                                    myEdit.putString("mq8_h3_date", currdate);
+                                    myEdit.putInt("mq8_h3_score", correct);
+                                    myEdit.commit();
+                                    Log.i("SP_", "mq8_h3 processed");
+                                } else {
+
+                                    String mq8_h4_pref = sharedPreferences.getString("mq8_h4_date", null);
+                                    if (mq8_h4_pref == null) {
+                                        myEdit.putString("mq8_h4_date", currdate);
+                                        myEdit.putInt("mq8_h4_score", correct);
+                                        myEdit.commit();
+                                        Log.i("SP_", "mq8_h4 processed");
+                                    } else {
+                                        String mq8_h5_pref = sharedPreferences.getString("mq8_h5_date", null);
+                                        if (mq8_h5_pref == null) {
+                                            myEdit.putString("mq8_h5_date", currdate);
+                                            myEdit.putInt("mq8_h5_score", correct);
+                                            myEdit.commit();
+                                            Log.i("SP_", "mq8_h5 processed");
+                                        } else{
+                                            String mq8_h6_pref = sharedPreferences.getString("mq8_h6_date", null);
+                                            if (mq8_h6_pref == null) {
+                                                myEdit.putString("mq8_h6_date", currdate);
+                                                myEdit.putInt("mq8_h6_score", correct);
+                                                myEdit.commit();
+                                                Log.i("SP_", "mq8_h6 processed");
+                                            }else{
+                                                String mq8_h7_pref = sharedPreferences.getString("mq8_h7_date", null);
+                                                if (mq8_h7_pref == null) {
+                                                    myEdit.putString("mq8_h7_date", currdate);
+                                                    myEdit.putInt("mq8_h7_score", correct);
+                                                    myEdit.commit();
+                                                    Log.i("SP_", "mq8_h7 processed");
+                                                }else{
+                                                    String mq8_h8_pref = sharedPreferences.getString("mq8_h8_date", null);
+                                                    if (mq8_h8_pref == null) {
+                                                        myEdit.putString("mq8_h8_date", currdate);
+                                                        myEdit.putInt("mq8_h8_score", correct);
+                                                        myEdit.commit();
+                                                        Log.i("SP_", "mq8_h8 processed");
+                                                    }else{
+                                                        String mq8_h9_pref = sharedPreferences.getString("mq8_h9_date", null);
+                                                        if (mq8_h9_pref == null) {
+                                                            myEdit.putString("mq8_h9_date", currdate);
+                                                            myEdit.putInt("mq8_h9_score", correct);
+                                                            myEdit.commit();
+                                                            Log.i("SP_", "mq8_h9 processed");
+                                                        }else{
+                                                            String mq8_h10_pref = sharedPreferences.getString("mq8_h10_date", null);
+                                                            if (mq8_h10_pref == null) {
+                                                                myEdit.putString("mq8_h10_date", currdate);
+                                                                myEdit.putInt("mq8_h10_score", correct);
+                                                                myEdit.commit();
+                                                                Log.i("SP_", "mq8_h10 processed");
+                                                            }else{
+                                                                Log.i("SP_","history is full");
+
+                                                                //adjusts entries 2 to 1, 3 to 2 and so on
+                                                                myEdit.putString("mq8_h1_date",  sharedPreferences.getString("mq8_h2_date", ""));
+                                                                myEdit.putInt("mq8_h1_score", sharedPreferences.getInt("mq8_h2_score", 0));
+
+                                                                myEdit.putString("mq8_h2_date",  sharedPreferences.getString("mq8_h3_date", ""));
+                                                                myEdit.putInt("mq8_h2_score", sharedPreferences.getInt("mq8_h3_score", 0));
+
+                                                                myEdit.putString("mq8_h3_date",  sharedPreferences.getString("mq8_h4_date", ""));
+                                                                myEdit.putInt("mq8_h3_score", sharedPreferences.getInt("mq8_h4_score", 0));
+
+                                                                myEdit.putString("mq8_h4_date",  sharedPreferences.getString("mq8_h5_date", ""));
+                                                                myEdit.putInt("mq8_h4_score", sharedPreferences.getInt("mq8_h5_score", 0));
+
+                                                                myEdit.putString("mq8_h5_date",  sharedPreferences.getString("mq8_h6_date", ""));
+                                                                myEdit.putInt("mq8_h5_score", sharedPreferences.getInt("mq8_h6_score", 0));
+
+                                                                myEdit.putString("mq8_h6_date",  sharedPreferences.getString("mq8_h7_date", ""));
+                                                                myEdit.putInt("mq8_h6_score", sharedPreferences.getInt("mq8_h7_score", 0));
+
+                                                                myEdit.putString("mq8_h7_date",  sharedPreferences.getString("mq8_h8_date", ""));
+                                                                myEdit.putInt("mq8_h7_score", sharedPreferences.getInt("mq8_h8_score", 0));
+
+                                                                myEdit.putString("mq8_h8_date",  sharedPreferences.getString("mq8_h9_date", ""));
+                                                                myEdit.putInt("mq8_h8_score", sharedPreferences.getInt("mq8_h9_score", 0));
+
+                                                                myEdit.putString("mq8_h9_date",  sharedPreferences.getString("mq8_h10_date", ""));
+                                                                myEdit.putInt("mq8_h9_score", sharedPreferences.getInt("mq8_h10_score", 0));
+                                                                //adjusts entries 2 to 1, 3 to 2 and so on
+                                                                myEdit.putString("mq8_h10_date", currdate);
+                                                                myEdit.putInt("mq8_h10_score", correct);
+                                                                myEdit.commit();
+
+                                                            }
+                                                        }
+                                                    }
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //end of storing history stuff
+
+                        sharedPreferences  = getSharedPreferences("M_Q7SharedPref", MODE_PRIVATE);
+                        int q8_h1_s = sharedPreferences.getInt("mq8_h1_score", 0);
+                        String q8_h1_d = sharedPreferences.getString("mq8_h1_date", "");
+                        int q8_h2_s = sharedPreferences.getInt("mq8_h2_score", 0);
+                        String q8_h2_d = sharedPreferences.getString("mq8_h2_date", "");
+                        int q8_h3_s = sharedPreferences.getInt("mq8_h3_score", 0);
+                        String q8_h3_d = sharedPreferences.getString("mq8_h3_date", "");
+                        int q8_h4_s = sharedPreferences.getInt("mq8_h4_score", 0);
+                        String q8_h4_d = sharedPreferences.getString("mq8_h4_date", "");
+                        int q8_h5_s = sharedPreferences.getInt("mq8_h5_score", 0);
+                        String q8_h5_d = sharedPreferences.getString("mq8_h5_date", "");
+                        int q8_h6_s = sharedPreferences.getInt("mq8_h6_score", 0);
+                        String q8_h6_d = sharedPreferences.getString("mq8_h6_date", "");
+                        int q8_h7_s = sharedPreferences.getInt("mq8_h7_score", 0);
+                        String q8_h7_d = sharedPreferences.getString("mq8_h7_date", "");
+                        int q8_h8_s = sharedPreferences.getInt("mq8_h8_score", 0);
+                        String q8_h8_d = sharedPreferences.getString("mq8_h8_date", "");
+                        int q8_h9_s = sharedPreferences.getInt("mq8_h9_score", 0);
+                        String q8_h9_d = sharedPreferences.getString("mq8_h9_date", "");
+                        int q8_h10_s = sharedPreferences.getInt("mq8_h10_score", 0);
+                        String q8_h10_d = sharedPreferences.getString("mq8_h10_date", "");
+                        Log.i("SP_content", "" );
+                        Log.i("SP_content", "h1: "+ q8_h1_d +" "+ q8_h1_s );
+                        Log.i("SP_content", "h2: "+ q8_h2_d +" "+ q8_h2_s );
+                        Log.i("SP_content", "h3: "+ q8_h3_d +" "+ q8_h3_s );
+                        Log.i("SP_content", "h4: "+ q8_h4_d +" "+ q8_h4_s );
+                        Log.i("SP_content", "h5: "+ q8_h5_d +" "+ q8_h5_s );
+                        Log.i("SP_content", "h6: "+ q8_h6_d +" "+ q8_h6_s );
+                        Log.i("SP_content", "h7: "+ q8_h7_d +" "+ q8_h7_s );
+                        Log.i("SP_content", "h8: "+ q8_h8_d +" "+ q8_h8_s );
+                        Log.i("SP_content", "h9: "+ q8_h9_d +" "+ q8_h9_s );
+                        Log.i("SP_content", "h10: "+ q8_h10_d +" "+ q8_h10_s );
                         AlertDialog dialog = new AlertDialog.Builder(midterm_quiz8.this)
 
                                 .setTitle("Caution")

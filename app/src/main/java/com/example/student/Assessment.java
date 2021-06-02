@@ -67,7 +67,7 @@ public class Assessment extends AppCompatActivity {
         LineDataSet set1;
 
         set1 = new LineDataSet(scoreEntries, "Score");
-        set1.setColor(Color.rgb(80, 80, 171),100); //line color
+        set1.setColor(getResources().getColor(R.color.pie_color_4));  //line color
         set1.setValueTextColor(Color.rgb(55, 70, 73));
         set1.setValueTextSize(8f);
         set1.setMode(LineDataSet.Mode.LINEAR);
@@ -83,7 +83,7 @@ public class Assessment extends AppCompatActivity {
         mLineGraph.getAxisRight().setEnabled(false);
 
         set1.setLineWidth(3f);
-        set1.setCircleRadius(6f);
+        set1.setCircleRadius(4f);
         set1.setDrawCircleHole(true);
         set1.setCircleHoleRadius(2f);
         set1.setCircleHoleColor(Color.WHITE);
