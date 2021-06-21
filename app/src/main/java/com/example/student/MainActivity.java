@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         CardView fone = (CardView) findViewById(R.id.fone);
         LinearLayout lecture = (LinearLayout) findViewById(R.id.lecture);
         LinearLayout simulation = (LinearLayout)findViewById(R.id.Simulation);
+        LinearLayout assessment = (LinearLayout)findViewById(R.id.Assessment);
         simulation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                openActivity1();
+            }
+        });
+        assessment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opensAssessment();
             }
         });
     }
@@ -41,4 +47,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    private void opensAssessment(){
+        Intent intent = new Intent(this,Chart.class);
+        startActivity(intent);
+    }
+
+
 }

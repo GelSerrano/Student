@@ -5,8 +5,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,11 +47,21 @@ public class final_quiz14 extends AppCompatActivity {
     Button next1, next2, next3, next4, next5, next6, next7, next8, next9, back2, back3, back4, back5, back6, back7, back8, back9, back10;
     EditText ans8, ans9, ans10;
     DatabaseReference databaseReference;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_quiz14);
+
+        correct =0;
+        // Storing data into SharedPreferences
+        sharedPreferences = getSharedPreferences("F_Q14SharedPref",MODE_PRIVATE);
+        final SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        //getDate
+        DateTime dt = new DateTime();
+        final String currdate = dt.getDate();
 
         timer = findViewById(R.id.textView10);
         //Button
@@ -668,7 +680,160 @@ public class final_quiz14 extends AppCompatActivity {
                             wrong++;
                         }
 
+                        //storing history stuff
+                        String fq14_h1_pref = sharedPreferences.getString("fq14_h1_date", null);
+                        if(fq14_h1_pref == null) {
+                            myEdit.putString("fq14_h1_date",currdate);
+                            myEdit.putInt("fq14_h1_score", correct);
+                            myEdit.commit();
 
+                            myEdit.putString("test","test");
+                            Log.i("SP_", "fq14_h1 processed");
+
+                        } else {
+                            String fq14_h2_pref = sharedPreferences.getString("fq14_h2_date", null);
+                            if (fq14_h2_pref == null) {
+                                myEdit.putString("fq14_h2_date", currdate);
+                                myEdit.putInt("fq14_h2_score", correct);
+                                myEdit.commit();
+                                Log.i("SP_", "fq14_h2 processed");
+                            } else {
+                                String fq14_h3_pref = sharedPreferences.getString("fq14_h3_date", null);
+                                if (fq14_h3_pref == null) {
+                                    myEdit.putString("fq14_h3_date", currdate);
+                                    myEdit.putInt("fq14_h3_score", correct);
+                                    myEdit.commit();
+                                    Log.i("SP_", "fq14_h3 processed");
+                                } else {
+
+                                    String fq14_h4_pref = sharedPreferences.getString("fq14_h4_date", null);
+                                    if (fq14_h4_pref == null) {
+                                        myEdit.putString("fq14_h4_date", currdate);
+                                        myEdit.putInt("fq14_h4_score", correct);
+                                        myEdit.commit();
+                                        Log.i("SP_", "fq14_h4 processed");
+                                    } else {
+                                        String fq14_h5_pref = sharedPreferences.getString("fq14_h5_date", null);
+                                        if (fq14_h5_pref == null) {
+                                            myEdit.putString("fq14_h5_date", currdate);
+                                            myEdit.putInt("fq14_h5_score", correct);
+                                            myEdit.commit();
+                                            Log.i("SP_", "fq14_h5 processed");
+                                        } else{
+                                            String fq14_h6_pref = sharedPreferences.getString("fq14_h6_date", null);
+                                            if (fq14_h6_pref == null) {
+                                                myEdit.putString("fq14_h6_date", currdate);
+                                                myEdit.putInt("fq14_h6_score", correct);
+                                                myEdit.commit();
+                                                Log.i("SP_", "fq14_h6 processed");
+                                            }else{
+                                                String fq14_h7_pref = sharedPreferences.getString("fq14_h7_date", null);
+                                                if (fq14_h7_pref == null) {
+                                                    myEdit.putString("fq14_h7_date", currdate);
+                                                    myEdit.putInt("fq14_h7_score", correct);
+                                                    myEdit.commit();
+                                                    Log.i("SP_", "fq14_h7 processed");
+                                                }else{
+                                                    String fq14_h8_pref = sharedPreferences.getString("fq14_h8_date", null);
+                                                    if (fq14_h8_pref == null) {
+                                                        myEdit.putString("fq14_h8_date", currdate);
+                                                        myEdit.putInt("fq14_h8_score", correct);
+                                                        myEdit.commit();
+                                                        Log.i("SP_", "fq14_h8 processed");
+                                                    }else{
+                                                        String fq14_h9_pref = sharedPreferences.getString("fq14_h9_date", null);
+                                                        if (fq14_h9_pref == null) {
+                                                            myEdit.putString("fq14_h9_date", currdate);
+                                                            myEdit.putInt("fq14_h9_score", correct);
+                                                            myEdit.commit();
+                                                            Log.i("SP_", "fq14_h9 processed");
+                                                        }else{
+                                                            String fq14_h10_pref = sharedPreferences.getString("fq14_h10_date", null);
+                                                            if (fq14_h10_pref == null) {
+                                                                myEdit.putString("fq14_h10_date", currdate);
+                                                                myEdit.putInt("fq14_h10_score", correct);
+                                                                myEdit.commit();
+                                                                Log.i("SP_", "fq14_h10 processed");
+                                                            }else{
+                                                                Log.i("SP_","history is full");
+
+                                                                //adjusts entries 2 to 1, 3 to 2 and so on
+                                                                myEdit.putString("fq14_h1_date",  sharedPreferences.getString("fq14_h2_date", ""));
+                                                                myEdit.putInt("fq14_h1_score", sharedPreferences.getInt("fq14_h2_score", 0));
+
+                                                                myEdit.putString("fq14_h2_date",  sharedPreferences.getString("fq14_h3_date", ""));
+                                                                myEdit.putInt("fq14_h2_score", sharedPreferences.getInt("fq14_h3_score", 0));
+
+                                                                myEdit.putString("fq14_h3_date",  sharedPreferences.getString("fq14_h4_date", ""));
+                                                                myEdit.putInt("fq14_h3_score", sharedPreferences.getInt("fq14_h4_score", 0));
+
+                                                                myEdit.putString("fq14_h4_date",  sharedPreferences.getString("fq14_h5_date", ""));
+                                                                myEdit.putInt("fq14_h4_score", sharedPreferences.getInt("fq14_h5_score", 0));
+
+                                                                myEdit.putString("fq14_h5_date",  sharedPreferences.getString("fq14_h6_date", ""));
+                                                                myEdit.putInt("fq14_h5_score", sharedPreferences.getInt("fq14_h6_score", 0));
+
+                                                                myEdit.putString("fq14_h6_date",  sharedPreferences.getString("fq14_h7_date", ""));
+                                                                myEdit.putInt("fq14_h6_score", sharedPreferences.getInt("fq14_h7_score", 0));
+
+                                                                myEdit.putString("fq14_h7_date",  sharedPreferences.getString("fq14_h8_date", ""));
+                                                                myEdit.putInt("fq14_h7_score", sharedPreferences.getInt("fq14_h8_score", 0));
+
+                                                                myEdit.putString("fq14_h8_date",  sharedPreferences.getString("fq14_h9_date", ""));
+                                                                myEdit.putInt("fq14_h8_score", sharedPreferences.getInt("fq14_h9_score", 0));
+
+                                                                myEdit.putString("fq14_h9_date",  sharedPreferences.getString("fq14_h10_date", ""));
+                                                                myEdit.putInt("fq14_h9_score", sharedPreferences.getInt("fq14_h10_score", 0));
+                                                                //adjusts entries 2 to 1, 3 to 2 and so on
+                                                                myEdit.putString("fq14_h10_date", currdate);
+                                                                myEdit.putInt("fq14_h10_score", correct);
+                                                                myEdit.commit();
+
+                                                            }
+                                                        }
+                                                    }
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //end of storing history stuff
+
+                        sharedPreferences  = getSharedPreferences("F_Q14SharedPref", MODE_PRIVATE);
+                        int fq14_h1_s = sharedPreferences.getInt("fq14_h1_score", 0);
+                        String fq14_h1_d = sharedPreferences.getString("fq14_h1_date", "");
+                        int fq14_h2_s = sharedPreferences.getInt("fq14_h2_score", 0);
+                        String fq14_h2_d = sharedPreferences.getString("fq14_h2_date", "");
+                        int fq14_h3_s = sharedPreferences.getInt("fq14_h3_score", 0);
+                        String fq14_h3_d = sharedPreferences.getString("fq14_h3_date", "");
+                        int fq14_h4_s = sharedPreferences.getInt("fq14_h4_score", 0);
+                        String fq14_h4_d = sharedPreferences.getString("fq14_h4_date", "");
+                        int fq14_h5_s = sharedPreferences.getInt("fq14_h5_score", 0);
+                        String fq14_h5_d = sharedPreferences.getString("fq14_h5_date", "");
+                        int fq14_h6_s = sharedPreferences.getInt("fq14_h6_score", 0);
+                        String fq14_h6_d = sharedPreferences.getString("fq14_h6_date", "");
+                        int fq14_h7_s = sharedPreferences.getInt("fq14_h7_score", 0);
+                        String fq14_h7_d = sharedPreferences.getString("fq14_h7_date", "");
+                        int fq14_h8_s = sharedPreferences.getInt("fq14_h8_score", 0);
+                        String fq14_h8_d = sharedPreferences.getString("fq14_h8_date", "");
+                        int fq14_h9_s = sharedPreferences.getInt("fq14_h9_score", 0);
+                        String fq14_h9_d = sharedPreferences.getString("fq14_h9_date", "");
+                        int fq14_h10_s = sharedPreferences.getInt("fq14_h10_score", 0);
+                        String fq14_h10_d = sharedPreferences.getString("fq14_h10_date", "");
+                        Log.i("SP_content", "" );
+                        Log.i("SP_content", "h1: "+ fq14_h1_d +" "+ fq14_h1_s );
+                        Log.i("SP_content", "h2: "+ fq14_h2_d +" "+ fq14_h2_s );
+                        Log.i("SP_content", "h3: "+ fq14_h3_d +" "+ fq14_h3_s );
+                        Log.i("SP_content", "h4: "+ fq14_h4_d +" "+ fq14_h4_s );
+                        Log.i("SP_content", "h5: "+ fq14_h5_d +" "+ fq14_h5_s );
+                        Log.i("SP_content", "h6: "+ fq14_h6_d +" "+ fq14_h6_s );
+                        Log.i("SP_content", "h7: "+ fq14_h7_d +" "+ fq14_h7_s );
+                        Log.i("SP_content", "h8: "+ fq14_h8_d +" "+ fq14_h8_s );
+                        Log.i("SP_content", "h9: "+ fq14_h9_d +" "+ fq14_h9_s );
+                        Log.i("SP_content", "h10: "+ fq14_h10_d +" "+ fq14_h10_s );
                         AlertDialog dialog = new AlertDialog.Builder(final_quiz14.this)
 
                                 .setTitle("Caution")
